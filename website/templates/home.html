@@ -34,8 +34,9 @@
             <td>{{ record.state }}</td>
             <td>{{ record.zipcode }}</td>
             <td>{{ record.created_at }}</td>
-            <td><a href="">{{ record.id }}</a></td>
+            <td><a href="{% url 'record' record.id %}">{{ record.id }}</a></td>
         </tr>
+
         {% endfor %}
 
         {% endif %}
@@ -65,8 +66,8 @@
 
     </form>
 
+</div>
 
+{% endif %}
 
-    {% endif %}
-
-    {% endblock %}
+{% endblock %}
